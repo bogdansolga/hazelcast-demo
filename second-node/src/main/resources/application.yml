@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: hz-demo-second-node
+
+  jackson:
+    serialization:
+      INDENT_OUTPUT: true
+
+# logging settings
+logging:
+  level:
+    root: info
+    com:
+      hazelcast:
+        config: warn
+        instance: error
+        nio: warn
+        spi: warn
+        system: warn
+    org:
+      apache: warn
+      springframework: warn
+
+  pattern:
+    # special characters need to be escaped / quoted
+    console: '%clr([%date{HH:mm:ss.SSS}]){faint} %clr(%thread) %clr(%2p) %clr(%-30.30logger{36}){cyan} %m%n%wex'
+
+server:
+  port: 8081
